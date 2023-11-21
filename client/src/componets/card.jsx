@@ -4,11 +4,46 @@ function Card(){
         <div>
             <div class="container">
             <div class="box">
-             <span class="title">GLASS EFFECT</span>
+             <span class="title">Titulo</span>
              <div>
-            <strong>JOE WATSON SBF</strong>
-            <p>0000 000 000 0000</p>
-            <span>VALID</span> <span>01/28</span>
+            <strong>Tareas</strong>
+            <div>
+              <ul>
+                <li>
+                  <input type="checkbox" id="item1" />{" "}
+                  <label htmlFor="item1">Tarea 1</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="item2" />{" "}
+                  <label htmlFor="item2">Tarea 2</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="item3" />{" "}
+                  <label htmlFor="item3">Tarea 3</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="item3" />{" "}
+                  <label htmlFor="item3">Tarea 3</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="item3" />{" "}
+                  <label htmlFor="item3">Tarea 3</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="item3" />{" "}
+                  <label htmlFor="item3">Tarea 3</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="item3" />{" "}
+                  <label htmlFor="item3">Tarea 3</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="item3" />{" "}
+                  <label htmlFor="item3">Tarea 3</label>
+                </li>
+              </ul>
+            </div>
+            <span>fecha de inicio</span> <span>fecha de fin </span>
           </div>
          </div>
           </div>
