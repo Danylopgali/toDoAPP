@@ -17,13 +17,19 @@ function NewDuties() {
            
             <div className="password-group">
               <div className="checkbox-group">
-
+                 
                 <input type="checkbox" id="rememberMe" />
                 <label className="label" htmlFor="rememberMe">
                   Recuerdame 
                 </label>
+              </div>
+              <button className="chat-gp3"> <span>Chat GP3</span>
+              </button>
+            </div>
 
-                <ul className="wrapper">
+            <div className="parametros-2">
+              
+            <ul className="wrapper">
                   <li className="icon low-priority">
                    <span className="tooltip">Poca Prioridad</span>
                    <span><i className="fas fa-exclamation-circle"></i></span>
@@ -37,20 +43,22 @@ function NewDuties() {
                    <span><i className="fas fa-exclamation-circle"></i></span>
                    </li>
                  </ul>
+                 
+               <div className="fechas">
+                 <p>
+                <label for="fecha">Fecha Inicio: </label>
+                <input type="date" id="fecha" name="fecha" />
+                 </p>
+                 <p>
+                 <label for="fecha">Fecha Final: </label>
+                  <input type="date" id="fecha" name="fecha" />
+                 </p>
+         </div>
 
-              </div>
-
-              <button className="chat-gp3"> <span>Chat GP3</span>
-              </button>
             </div>
 
 
-
-            <button className="btn">Guaeadar tarea </button>
-  
-            <p className="no-account">
-              Don't Have an Account ?<a className="link"> Sign Up</a>
-            </p>
+            <button className="btn">Guadar tarea </button>
           </div>
         </div>
       </div>

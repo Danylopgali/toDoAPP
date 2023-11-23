@@ -79,6 +79,9 @@
     color: black;
     font-size: 14px;
     font-weight: 500;
+    margin-left: 40px; /* Ajusta este valor según tus necesidades */
+
+
   }
   
   .forget-password {
@@ -88,11 +91,7 @@
     text-decoration: none;
   }
   
-  .forget-password:hover {
-    text-decoration: underline;
-    color: #f37e10;
-  }
-  
+
   .btn {
     margin-top: 20px;
     margin-bottom: 10px;
@@ -123,14 +122,22 @@
     color: #f37e10;
     text-decoration: underline;
   }
-
+.parametros-2{
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Crea dos columnas de igual tamaño */
+  gap: 80px; /* Agrega espacio entre las columnas */
+}
+.fechas{
+  flex: 1; /* Hace que ambas mitades ocupen el mismo espacio disponible */
+  padding: 20px; /* Agrega algún espacio entre las dos mitades */
+}
 
 /* semaforo de prioridad cambiar colores y nombres */
 
 .wrapper {
   display: inline-flex;
   list-style: none;
-  height: 50px;
+  height: 40px;
   width: 100%;
   padding-top: 2px;
   font-family: "Poppins", sans-serif;
@@ -152,6 +159,8 @@
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  margin-left: 5px; /* Ajusta este valor según tus necesidades */
+
 }
 
 .wrapper .tooltip {
@@ -215,14 +224,16 @@
 }
 
 /*boton de chat GP3*/
+
 .chat-gp3 {
   outline: none;
   cursor: pointer;
   border: none;
-  padding: 0.9rem 2rem;
+  padding: 0.5rem 1.5rem; /* Ajusta el padding para cambiar el tamaño */
   margin: 0;
   font-family: inherit;
-  font-size: inherit;
+  font-size: 14px; /* Ajusta el tamaño de la fuente */
+
   position: relative;
   display: inline-block;
   letter-spacing: 0.05rem;
@@ -232,6 +243,8 @@
   overflow: hidden;
   background: #66ff66;
   color: ghostwhite;
+  margin-right: 40px; /* Ajusta este valor según tus necesidades */
+
  }
  
  .chat-gp3 span {
