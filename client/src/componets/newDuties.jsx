@@ -10,21 +10,24 @@ function NewDuties() {
   
             <div className="input-group">
               <p className="text">Titulo</p>
+              
               <input className="input" type="text" placeholder="Por ejemplo: Proyecto todo app " /> 
               <p className="text">Descripcion</p>
               <input className="input" type="text" placeholder="Escribe la descripcio de la tarea" /> 
             </div>
            
+
             <div className="password-group">
-              <div className="checkbox-group">
-                 
-                <input type="checkbox" id="rememberMe" />
-                <label className="label" htmlFor="rememberMe">
-                  Recuerdame 
-                </label>
-              </div>
-              <button className="chat-gp3"> <span>Chat GP3</span>
-              </button>
+            <div className="checkbox-group">
+            <div class="label-container">
+              <input type="checkbox" id="rememberMe" />
+              <label class="label" htmlFor="rememberMe">
+               Recuérdame
+             </label>
+             </div>
+                 </div>
+                <button className="chat-gp3"> <span>Chat GP3</span>
+                </button>
             </div>
 
             <div className="parametros-2">
@@ -53,7 +56,7 @@ function NewDuties() {
                  <label for="fecha">Fecha Final: </label>
                   <input type="date" id="fecha" name="fecha" />
                  </p>
-         </div>
+                 </div>
 
             </div>
 
