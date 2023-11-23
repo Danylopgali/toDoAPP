@@ -1,8 +1,17 @@
 import "./newDuties.css"
 
-function NewDuties() {
+function NewDuties({closeModal}) {
+
+
+  const handleGuardarTarea = () => {
+    // Aquí puedes realizar acciones relacionadas con guardar la tarea
+console.log("clik")
+    // Luego, cierra el modal llamando a la función proporcionada por el componente padre
+    closeModal();
+  };
+
     return (
-      <div className="card-container">
+      <div  id="myModal" className="card-container" >
       
         <div className="container">
           <div className="log-card">
@@ -61,7 +70,7 @@ function NewDuties() {
             </div>
 
 
-            <button className="btn">Guadar tarea </button>
+            <button className="btn" onClick={handleGuardarTarea}>Guadar tarea </button>
           </div>
         </div>
       </div>

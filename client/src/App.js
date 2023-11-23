@@ -6,7 +6,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/home" element={<Home />} />
-        <Route path="/newdutie" element={<NewDuties />} />
+        {/* <Route path="/newdutie" element={<NewDuties />} /> */}
 
       </Routes>
     </BrowserRouter>

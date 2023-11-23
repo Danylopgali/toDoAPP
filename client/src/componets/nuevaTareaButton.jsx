@@ -1,15 +1,18 @@
-import "./NuevaTareaButton.css"
+import { useState } from "react";
+import "./NuevaTareaButton.css";
 
-function NuevaTareaButton(){
-    return(
-        <div>
-         <button class="button">
-            <span class="button_lg">
-            <span class="button_sl"></span>
-            <span class="button_text">NUEVA TAREA</span>
-            </span>
-         </button>
-        </div>
-    )
+function NuevaTareaButton({onClick}) {
+  
+  return (
+    <div>
+      <button  className="button" onClick={onClick}>
+        <span className="button_lg">
+          <span className="button_sl"></span>
+          <span className="button_text">NUEVA TAREA</span>
+        </span>
+      </button>
+    </div>
+  );
 }
+
 export default NuevaTareaButton;
