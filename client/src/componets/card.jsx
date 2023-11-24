@@ -1,53 +1,36 @@
-import "./card.css"
-function Card(){
-    return(
-        <div>
-            <div class="container">
-            <div class="box">
-             <span class="title">Titulo</span>
-             <div>
-            <strong>Tareas</strong>
-            <div>
-              <ul>
-                <li>
-                  <input type="checkbox" id="item1" />{" "}
-                  <label htmlFor="item1">Tarea 1</label>
-                </li>
-                <li>
-                  <input type="checkbox" id="item2" />{" "}
-                  <label htmlFor="item2">Tarea 2</label>
-                </li>
-                <li>
-                  <input type="checkbox" id="item3" />{" "}
-                  <label htmlFor="item3">Tarea 3</label>
-                </li>
-                <li>
-                  <input type="checkbox" id="item3" />{" "}
-                  <label htmlFor="item3">Tarea 3</label>
-                </li>
-                <li>
-                  <input type="checkbox" id="item3" />{" "}
-                  <label htmlFor="item3">Tarea 3</label>
-                </li>
-                <li>
-                  <input type="checkbox" id="item3" />{" "}
-                  <label htmlFor="item3">Tarea 3</label>
-                </li>
-                <li>
-                  <input type="checkbox" id="item3" />{" "}
-                  <label htmlFor="item3">Tarea 3</label>
-                </li>
-                <li>
-                  <input type="checkbox" id="item3" />{" "}
-                  <label htmlFor="item3">Tarea 3</label>
-                </li>
-              </ul>
-            </div>
-            <span>fecha de inicio</span> <span>fecha de fin </span>
+import React from 'react';
+import PropTypes from 'prop-types';
+import './card.css';
+
+function Card({ tarea }) {
+  const { titulo, descripcion, fechaInicio, fechaFin } = tarea;
+
+  return (
+    <div>
+      <div className="container">
+        <div className="box">
+          <div className="checkbox">
+            <input type="checkbox" />
           </div>
-         </div>
+          <span className="title">{titulo}</span>
+          <div>
+            <p>{descripcion}</p>
           </div>
+          <span>Fecha de inicio: {fechaInicio}</span>
+          <span>Fecha de fin: {fechaFin}</span>
         </div>
-    )
+      </div>
+    </div>
+  );
 }
+
+Card.propTypes = {
+  tarea: PropTypes.shape({
+    titulo: PropTypes.string.isRequired,
+    descripcion: PropTypes.string.isRequired,
+    fechaInicio: PropTypes.string.isRequired,
+    fechaFin: PropTypes.string.isRequired,
+  }).isRequired,
+};
+
 export default Card;

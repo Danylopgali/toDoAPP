@@ -1,81 +1,125 @@
-import "./newDuties.css"
+import React, { useState } from 'react';
+import './newDuties.css';
 
-function NewDuties({closeModal}) {
-
+function NewDuties({ closeModal, addCard }) {
+  const [titulo, setTitulo] = useState('');
+  const [descripcion, setDescripcion] = useState('');
+  const [fechaInicio, setFechaInicio] = useState('');
+  const [fechaFin, setFechaFin] = useState('');
 
   const handleGuardarTarea = () => {
-    // Aquí puedes realizar acciones relacionadas con guardar la tarea
-console.log("clik")
-    // Luego, cierra el modal llamando a la función proporcionada por el componente padre
+    const nuevaTarea = {
+      titulo,
+      descripcion,
+      fechaInicio,
+      fechaFin,
+    };
+
+    // Llama a la función 'addCard' pasada como prop para agregar la nueva tarjeta
+    addCard(nuevaTarea);
+
+    // Limpia los campos del formulario después de guardar la tarea
+    setTitulo('');
+    setDescripcion('');
+    setFechaInicio('');
+    setFechaFin('');
+
+    // Cierra el modal llamando a la función proporcionada por el componente padre
     closeModal();
   };
 
-    return (
-      <div  id="myModal" className="card-container" >
-      
-        <div className="container">
-          <div className="log-card">
-            <p className="heading">Crea una nueva tarea</p>
-  
-            <div className="input-group">
-              <p className="text">Titulo</p>
-              
-              <input className="input" type="text" placeholder="Por ejemplo: Proyecto todo app " /> 
-              <p className="text">Descripcion</p>
-              <input className="input" type="text" placeholder="Escribe la descripcio de la tarea" /> 
-            </div>
-           
+  return (
+    <div id="myModal" className="card-container">
+      <div className="container">
+        <div className="log-card">
+          <p className="heading">Crea una nueva tarea</p>
 
-            <div className="password-group">
-            <div className="checkbox-group">
-            <div class="label-container">
-              <input type="checkbox" id="rememberMe" />
-              <label class="label" htmlFor="rememberMe">
-               Recuérdame
-             </label>
-             </div>
-                 </div>
-                <button className="chat-gp3"> <span>Chat GP3</span>
-                </button>
-            </div>
-
-            <div className="parametros-2">
-              
-            <ul className="wrapper">
-                  <li className="icon low-priority">
-                   <span className="tooltip">Poca Prioridad</span>
-                   <span><i className="fas fa-exclamation-circle"></i></span>
-                  </li>
-                  <li className="icon medium-priority">
-                   <span className="tooltip">Prioridad Media</span>
-                   <span><i className="fas fa-exclamation-triangle"></i></span>
-                  </li>
-                  <li className="icon high-priority">
-                   <span className="tooltip">Alta Prioridad</span>
-                   <span><i className="fas fa-exclamation-circle"></i></span>
-                   </li>
-                 </ul>
-                 
-               <div className="fechas">
-                 <p>
-                <label for="fecha">Fecha Inicio: </label>
-                <input type="date" id="fecha" name="fecha" />
-                 </p>
-                 <p>
-                 <label for="fecha">Fecha Final: </label>
-                  <input type="date" id="fecha" name="fecha" />
-                 </p>
-                 </div>
-
-            </div>
-
-
-            <button className="btn" onClick={handleGuardarTarea}>Guadar tarea </button>
+          <div className="input-group">
+            <p className="text">Titulo</p>
+            <input
+              className="input"
+              type="text"
+              value={titulo}
+              onChange={(e) => setTitulo(e.target.value)}
+              placeholder="Por ejemplo: Proyecto todo app"
+            />
+            <p className="text">Descripcion</p>
+            <input
+              className="input"
+              type="text"
+              value={descripcion}
+              onChange={(e) => setDescripcion(e.target.value)}
+              placeholder="Escribe la descripción de la tarea"
+            />
           </div>
+
+          <div className="password-group">
+            <div className="checkbox-group">
+              <div className="label-container">
+                <input type="checkbox" id="rememberMe" />
+                <label className="label" htmlFor="rememberMe">
+                  Recuérdame
+                </label>
+              </div>
+            </div>
+            <button className="chat-gp3">
+              <span>Chat GP3</span>
+            </button>
+          </div>
+
+          <div className="parametros-2">
+            <ul className="wrapper">
+              <li className="icon low-priority">
+                <span className="tooltip">Poca Prioridad</span>
+                <span>
+                  <i className="fas fa-exclamation-circle"></i>
+                </span>
+              </li>
+              <li className="icon medium-priority">
+                <span className="tooltip">Prioridad Media</span>
+                <span>
+                  <i className="fas fa-exclamation-triangle"></i>
+                </span>
+              </li>
+              <li className="icon high-priority">
+                <span className="tooltip">Alta Prioridad</span>
+                <span>
+                  <i className="fas fa-exclamation-circle"></i>
+                </span>
+              </li>
+            </ul>
+
+            <div className="fechas">
+              <p>
+                <label htmlFor="fecha">Fecha Inicio: </label>
+                <input
+                  type="date"
+                  id="fecha"
+                  name="fechaInicio"
+                  value={fechaInicio}
+                  onChange={(e) => setFechaInicio(e.target.value)}
+                />
+              </p>
+              <p>
+                <label htmlFor="fecha">Fecha Final: </label>
+                <input
+                  type="date"
+                  id="fecha"
+                  name="fechaFin"
+                  value={fechaFin}
+                  onChange={(e) => setFechaFin(e.target.value)}
+                />
+              </p>
+            </div>
+          </div>
+
+          <button className="btn" onClick={handleGuardarTarea}>
+            Guardar tarea
+          </button>
         </div>
       </div>
-    );
-  }
-  
-  export default NewDuties;
-  
+    </div>
+  );
+}
+
+export default NewDuties;
