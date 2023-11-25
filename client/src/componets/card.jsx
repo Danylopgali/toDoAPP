@@ -9,8 +9,9 @@ function Card({ tarea }) {
     <div>
       <div className="container">
         <div className="box">
-          <div className="checkbox">
-            <input type="checkbox" />
+          <div className="checkbox-delete">
+            <input  className="checkbox" type="checkbox" />
+            <button className='delete-button'> X</button>
           </div>
           <span className="title">{titulo}</span>
           <div>
