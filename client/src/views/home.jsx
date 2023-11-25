@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import NewDuties from "../componets/newDuties";
 import NuevaTareaButton from "../componets/nuevaTareaButton";
 import Cards from "../componets/cards";
-
+import "./home.css";
 
 function Home() {
     const [modalOpen, setModalOpen] = useState(false);
@@ -22,7 +22,7 @@ function Home() {
     };
   
     return (
-      <div>
+      <div className="contenedor">
         <div className="boton-nueva-tarea">
           <NuevaTareaButton onClick={openModal} />
         </div>
