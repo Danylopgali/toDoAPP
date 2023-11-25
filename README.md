@@ -26,6 +26,6 @@ Sigue estos pasos para ejecutar la aplicación en tu entorno local:
 
 ¡Listo! Ahora deberías poder acceder a la aplicación en [http://localhost:3000](http://localhost:3000).
 
-## Licencia
+
 
 
