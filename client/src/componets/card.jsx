@@ -2,16 +2,21 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './card.css';
 
-function Card({ tarea }) {
+function Card({ tarea ,deleteCard}) {
   const { titulo, descripcion, fechaInicio, fechaFin } = tarea;
 
+const handlerDelete = (index)=>{
+  console.log("boton de eliminar");
+  
+  deleteCard();
+};
   return (
     <div>
       <div className="container">
         <div className="box">
           <div className="checkbox-delete">
             <input  className="checkbox" type="checkbox" />
-            <button className='delete-button'> X</button>
+            <button className='delete-button' onClick={handlerDelete}> X</button>
           </div>
           <span className="title">{titulo}</span>
           <div>
@@ -32,6 +37,7 @@ Card.propTypes = {
     fechaInicio: PropTypes.string.isRequired,
     fechaFin: PropTypes.string.isRequired,
   }).isRequired,
+   deleteCard: PropTypes.func.isRequired,
 };
 
 export default Card;

@@ -19,15 +19,23 @@ function Home() {
 
     const addCard = (newCard) => {
       setCards([...cards, newCard]);
+      console.log(cards)
     };
-  
+    const deleteCard = (index) => {
+      console.log(index)
+      const nuevasTareas = [...cards];
+      nuevasTareas.splice(index, 1);
+    
+      setCards(nuevasTareas);
+    };
+ 
     return (
       <div className="contenedor">
         <div className="boton-nueva-tarea">
           <NuevaTareaButton onClick={openModal} />
         </div>
      <div>
-     <Cards tareas={cards} />
+     <Cards tareas={cards} deleteCard={deleteCard}/>
      </div>
         {modalOpen && (
           <div className="modal-overlay">
