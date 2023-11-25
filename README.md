@@ -24,7 +24,7 @@ Sigue estos pasos para ejecutar la aplicación en tu entorno local:
 3. Instala las dependencias: `npm install`.
 4. Inicia la aplicación: `npm start`.
 
-¡Listo! Ahora deberías poder acceder a la aplicación en [http://localhost:3000](http://localhost:3000).
+¡Listo! Ahora deberías poder acceder a la aplicación en [http://localhost:3000/home](http://localhost:3000/home).
 
 
 
