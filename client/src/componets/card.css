@@ -76,6 +76,14 @@
     box-shadow: 0px 0px 20px 1px #ffbb763f;
     border: 1px solid rgba(255, 255, 255, 0.454);
   }
+  /* div de checkbox-delete */
+  .checkbox-delete{
+    display: flex;
+    justify-content: space-between; /* Esto distribuirá los elementos a lo largo del contenedor */
+
+  }
+
+
 
   /* estilos del boton de eliminar */
   .delete-button {
@@ -87,19 +95,23 @@
     cursor: pointer;
     font-weight: bold;
     transition: background-color 0.3s;
+ 
   }
   
   .delete-button:hover {
     background-color: #c82333; /* Rojo más oscuro al pasar el mouse */
   }
 
+
+
   /* estilos del boton de checkbox */
+
   .checkbox {
     appearance: none; /* Oculta el estilo nativo del sistema operativo */
     -webkit-appearance: none;
     -moz-appearance: none;
-    width: 20px; /* Tamaño del checkbox */
-    height: 20px;
+    width: 30px; /* Tamaño del checkbox */
+    height: 30px;
     border: 2px solid #007bff; /* Borde del checkbox */
     border-radius: 4px; /* Borde redondeado */
     outline: none; /* Elimina el contorno predeterminado al enfocar */
