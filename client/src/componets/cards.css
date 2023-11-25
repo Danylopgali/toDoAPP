@@ -1,0 +1,6 @@
+.cards-container{
+    display: flex;
+    gap: 5px; /* Espacio entre las tarjetas */
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en filas si no hay espacio suficiente */
+    justify-content: space-around;
+}
