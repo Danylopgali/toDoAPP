@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './card.css';
 
 function Card({ tarea ,deleteCard}) {
-  const { titulo, descripcion, fechaInicio, fechaFin } = tarea;
+  const { titulo, descripcion, fechaInicio, fechaFin ,prioridad} = tarea;
 
 const handlerDelete = (index)=>{
   console.log("boton de eliminar");
@@ -24,6 +24,8 @@ const handlerDelete = (index)=>{
           </div>
           <span>Fecha de inicio: {fechaInicio}</span>
           <span>Fecha de fin: {fechaFin}</span>
+          <span>prioridad: {prioridad}</span>
+
         </div>
       </div>
     </div>
@@ -36,6 +38,7 @@ Card.propTypes = {
     descripcion: PropTypes.string.isRequired,
     fechaInicio: PropTypes.string.isRequired,
     fechaFin: PropTypes.string.isRequired,
+    prioridad:PropTypes.string.isRequired,
   }).isRequired,
    deleteCard: PropTypes.func.isRequired,
 };

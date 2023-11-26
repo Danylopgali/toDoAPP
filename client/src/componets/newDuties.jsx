@@ -6,6 +6,8 @@ function NewDuties({ closeModal, addCard }) {
   const [descripcion, setDescripcion] = useState('');
   const [fechaInicio, setFechaInicio] = useState('');
   const [fechaFin, setFechaFin] = useState('');
+  const [prioridad, setPrioridad] = useState('');
+
 
   const handleGuardarTarea = () => {
     const nuevaTarea = {
@@ -13,6 +15,7 @@ function NewDuties({ closeModal, addCard }) {
       descripcion,
       fechaInicio,
       fechaFin,
+      prioridad,
     };
 
     // Llama a la función 'addCard' pasada como prop para agregar la nueva tarjeta
@@ -23,10 +26,21 @@ function NewDuties({ closeModal, addCard }) {
     setDescripcion('');
     setFechaInicio('');
     setFechaFin('');
+    setPrioridad("")
 
     // Cierra el modal llamando a la función proporcionada por el componente padre
     closeModal();
   };
+  const handlePrioridad= (e)=>{
+console.log("boton de prioridad")
+console.log(e.target.className)
+if (e.target.id==="low"){
+  console.log("este es el boton de prioridad baja ")
+  setPrioridad("low")
+}
+
+}
+  
 
   return (
     <div id="myModal" className="card-container">
@@ -69,19 +83,19 @@ function NewDuties({ closeModal, addCard }) {
 
           <div className="parametros-2">
             <ul className="wrapper">
-              <li className="icon low-priority">
-                <span className="tooltip">Poca Prioridad</span>
+              <li id="low" className="icon low-priority" onClick={handlePrioridad}>
+                <span className="tooltip" >Poca Prioridad</span>
                 <span>
                   <i className="fas fa-exclamation-circle"></i>
                 </span>
               </li>
-              <li className="icon medium-priority">
+              <li id='medium' className="icon medium-priority" onClick={handlePrioridad}>
                 <span className="tooltip">Prioridad Media</span>
                 <span>
                   <i className="fas fa-exclamation-triangle"></i>
                 </span>
               </li>
-              <li className="icon high-priority">
+              <li id='high' className="icon high-priority" onClick={handlePrioridad}>
                 <span className="tooltip">Alta Prioridad</span>
                 <span>
                   <i className="fas fa-exclamation-circle"></i>

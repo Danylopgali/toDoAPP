@@ -20,6 +20,8 @@ Cards.propTypes = {
       descripcion: PropTypes.string.isRequired,
       fechaInicio: PropTypes.string.isRequired,
       fechaFin: PropTypes.string.isRequired,
+      prioridad:PropTypes.string.isRequired,
+
     })
   ).isRequired,
   deleteCard: PropTypes.func.isRequired,
