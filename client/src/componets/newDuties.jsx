@@ -38,6 +38,14 @@ if (e.target.id==="low"){
   console.log("este es el boton de prioridad baja ")
   setPrioridad("low")
 }
+else if (e.target.id==="high"){
+  console.log("este es el boton de prioridad alta ")
+  setPrioridad("high")
+}
+else if (e.target.id==="medium"){
+  console.log("este es el boton de prioridad media ")
+  setPrioridad("medium")
+}
 
 }
   

@@ -15,7 +15,10 @@ const handlerDelete = (index)=>{
       <div className="container">
         <div className="box">
           <div className="checkbox-delete">
+
             <input  className="checkbox" type="checkbox" />
+            <div className={`${prioridad === 'high' ? 'high' : prioridad === 'medium' ? 'medium' : 'low'}`}>
+            </div>
             <button className='delete-button' onClick={handlerDelete}> X</button>
           </div>
           <span className="title">{titulo}</span>
@@ -24,7 +27,6 @@ const handlerDelete = (index)=>{
           </div>
           <span>Fecha de inicio: {fechaInicio}</span>
           <span>Fecha de fin: {fechaFin}</span>
-          <span>prioridad: {prioridad}</span>
 
         </div>
       </div>
