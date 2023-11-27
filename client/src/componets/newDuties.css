@@ -308,3 +308,27 @@
   outline: none;
   border-color: #2196F3; /* Cambia el color del borde al enfocar */
 }
+.top{
+  display: flex;
+  justify-content: space-between; /* Esto distribuirá los elementos a lo largo del contenedor */
+  width: auto; /* Tamaño del checkbox */
+  height: 30px;
+ padding-bottom: 20px;
+}
+
+.delete-button {
+  background-color: #dc3545; /* Rojo */
+  color: #fff; /* Texto blanco */
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+
+}
+
+.delete-button:hover {
+  background-color: #c82333; /* Rojo más oscuro al pasar el mouse */
+}
+

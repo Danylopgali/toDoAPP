@@ -31,6 +31,20 @@ function NewDuties({ closeModal, addCard }) {
     // Cierra el modal llamando a la función proporcionada por el componente padre
     closeModal();
   };
+
+ const handleCerrarNewDuties =()=> {
+  setTitulo('');
+  setDescripcion('');
+  setFechaInicio('');
+  setFechaFin('');
+  setPrioridad("")
+
+  // Cierra el modal llamando a la función proporcionada por el componente padre
+  closeModal();
+
+ }
+
+
   const handlePrioridad= (e)=>{
 console.log("boton de prioridad")
 console.log(e.target.className)
@@ -51,10 +65,13 @@ else if (e.target.id==="medium"){
   
 
   return (
-    <div id="myModal" className="card-container">
+    <div id="myModal"  className="card-container">
       <div className="container">
         <div className="log-card">
+          <div className='top' >
           <p className="heading">Crea una nueva tarea</p>
+           <button className='delete-button' onClick={handleCerrarNewDuties}> X</button>
+          </div>
 
           <div className="input-group">
             <p className="text">Titulo</p>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import NewDuties from "../componets/newDuties";
 import NuevaTareaButton from "../componets/nuevaTareaButton";
 import Cards from "../componets/cards";
@@ -29,6 +29,7 @@ function Home() {
       setCards(nuevasTareas);
     };
  
+
     return (
       <div className="contenedor">
         <div className="boton-nueva-tarea">
@@ -38,7 +39,7 @@ function Home() {
      <Cards tareas={cards} deleteCard={deleteCard}/>
      </div>
         {modalOpen && (
-          <div className="modal-overlay">
+          <div className="modal-overlay" >
             <div className="modal">
               <span className="close" onClick={closeModal}>&times;</span>
               <NewDuties closeModal={closeModal} addCard={addCard} />
