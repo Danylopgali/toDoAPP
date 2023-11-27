@@ -113,21 +113,8 @@
   .btn:hover {
     background-color: #0653c7;
   }
-  
-  .no-account {
-    font-size: 16px;
-    font-weight: 400;
-  }
-  
-  .link {
-    font-weight: 800;
-    color: #2879f3;
-  }
-  
-  .link:hover {
-    color: #f37e10;
-    text-decoration: underline;
-  }
+
+
 .parametros-2{
   display: grid;
   grid-template-columns: 1fr 1fr; /* Crea dos columnas de igual tamaño */
